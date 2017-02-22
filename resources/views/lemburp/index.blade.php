@@ -3,7 +3,7 @@
     active
 @endsection
 @section('content')
-<h1>Daftar Lembur Pegawai</h1>
+<h1>Lembur Pegawai</h1>
 	<table border="1" class="table table-striped table-border table-hover">
 		<thead>
 			<tr>
@@ -23,7 +23,7 @@
 				<td>{{$data->kategori->kode_l}}</td>
 				<td>{{$data->Jumlah_jam}}</td>
 				<td>
-					<a href="{{route('lemburp.edit',$data->id)}}" class='btn btn-warning'> Edit </a>
+					<a href="{{route('lemburp.edit',$data->id)}}" class='btn btn-danger'> Edit </a>
 				</td>
 				<td>
 					{!! Form::open(['method'=>'DELETE','route'=>['lemburp.destroy',$data->id]]) !!}

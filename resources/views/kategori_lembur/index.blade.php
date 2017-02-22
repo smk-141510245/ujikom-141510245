@@ -3,7 +3,7 @@
     active
 @endsection
 @section('content')
-<h1>Daftar Kategori Lembur</h1>
+<h1>Kategori Lembur</h1>
 	<table border="1" class="table table-striped table-border table-hover">
 		<thead>
 			<tr>
@@ -25,7 +25,7 @@
 				<td>{{$data->jabatan->nama_j}}</td>
 				<td>{{$data->besar_uang}}</td>
 				<td>
-					<a href="{{route('kategori.edit',$data->id)}}" class='btn btn-warning'> Edit </a>
+					<a href="{{route('kategori.edit',$data->id)}}" class='btn btn-danger'> Edit </a>
 				</td>
 				<td>
 					{!! Form::open(['method'=>'DELETE','route'=>['kategori.destroy',$data->id]]) !!}
@@ -36,6 +36,6 @@
 			@endforeach
 		</tbody>
 	</table>
-	<a  href="{{url('kategori/create')}}" class="btn btn-primary form-control">Tambah</a>
+	<a  href="{{url('kategori/create')}}" class="btn btn-primary form-control">Tambah Data</a>
 
 @endsection

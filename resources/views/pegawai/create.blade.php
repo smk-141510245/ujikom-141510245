@@ -142,6 +142,7 @@
                             </div>
                         </div>
 
+                        
                         <div class="form-group {{ $errors->has('photo') ? ' has-error' : '' }}">
  
                             <label  class="col-md-4 control-label">Foto Pegawai</label>
@@ -157,6 +158,7 @@
        
                             </div>
                          </div>
+
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<h1>Daftar Kategori Tunjangan</h1>
+<h1>Tunjangan</h1>
 	<table border="1" class="table table-striped table-border table-hover">
 		<thead>
 			<tr>
@@ -26,7 +26,7 @@
 				<td>{{$data->status}}</td>
 				<td>{{$data->jumlah_anak}}</td>
 				<td>
-					<a href="{{route('tunjangan.edit',$data->id)}}" class='btn btn-warning'> Edit </a>
+					<a href="{{route('tunjangan.edit',$data->id)}}" class='btn btn-danger'> Edit </a>
 				</td>
 				<td>
 					{!! Form::open(['method'=>'DELETE','route'=>['tunjangan.destroy',$data->id]]) !!}

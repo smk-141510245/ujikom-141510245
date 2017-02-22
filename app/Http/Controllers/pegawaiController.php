@@ -125,7 +125,7 @@ class pegawaiController extends Controller
      */
     public function edit($id)
     {
-        $pegawai=Pegawai::find($id);;
+        $pegawai=Pegawai::find($id);
         $golongan=Golongan::all();
          $jabatan=Jabatan::all();
          $user=User::all();

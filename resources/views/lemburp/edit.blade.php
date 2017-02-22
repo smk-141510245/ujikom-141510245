@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-primary">
-                <div class="panel-heading">Edit Lembur</div>
+                <div class="panel-heading">Edit</div>
                 <div class="panel-body">
 					{!! Form::model($lemburp,['method'=>'PATCH','route'=>['lemburp.update',$lemburp->id]])!!}
 						{!! Form::hidden('id',null,['class'=>'form-control']) !!}

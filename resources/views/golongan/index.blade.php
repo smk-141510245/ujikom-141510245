@@ -3,7 +3,7 @@
 	active
 @endsection
 @section('content')
-<h1>Daftar Golongan</h1>
+<h1>Golongan</h1>
 	<table border="1" class="table table-striped table-border table-hover">
 		<thead>
 			<tr>
@@ -23,7 +23,7 @@
 				<td>{{$data->nama_g}}</td>
 				<td>{{$data->besar_uang}}</td>
 				<td>
-					<a href="{{route('golongan.edit',$data->id)}}" class='btn btn-warning'> Edit </a>
+					<a href="{{route('golongan.edit',$data->id)}}" class='btn btn-danger'> Edit </a>
 				</td>
 				<td>
 					{!! Form::open(['method'=>'DELETE','route'=>['golongan.destroy',$data->id]]) !!}
@@ -34,6 +34,6 @@
 			@endforeach
 		</tbody>
 	</table>
-	<a  href="{{url('golongan/create')}}" class="btn btn-primary form-control">Tambah</a>
+	<a  href="{{url('golongan/create')}}" class="btn btn-primary form-control">Tambah Data</a>
 
 @endsection

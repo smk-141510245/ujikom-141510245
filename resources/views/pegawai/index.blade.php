@@ -26,14 +26,9 @@
 											<td>{{$data->golongan->nama_g}}</td>
 											<td>{{$data->jabatan->nama_j}}</td>
 											<td>
-												
-											<div class="dropdown">
-							                    <a href="#" class="dropdown-toggle btn btn-primary" data-toggle="dropdown" role="button" aria-expanded="false">Lihat Photo <span class="caret"></span>
-							                    </a>
-												<ul class="dropdown-menu" role="menu">
-													<img src="assets/image/{{$data->photo}}" width="200" height="200">
-							                    </ul>
-							                </div>
+
+											<div><img src="assets/image/{{$data->photo}}" width="90" height="70">
+							              	</div>
 
 											</td>
 											
@@ -44,6 +39,7 @@
 			                </div>
 			            </div>
 			        </div>
+
 			        <div class="col-md-6 ">
 			            <div class="panel panel-primary">
 			                <div class="panel-heading">Data User</div>
@@ -66,7 +62,7 @@
 											<td>{{$data->user->email}}</td>
 											
 											<td>
-												<a href="{{route('pegawai.edit',$data->id)}}" class='btn btn-warning'> Edit </a>
+												<a href="{{route('pegawai.edit',$data->id)}}" class='btn btn-danger'> Edit </a>
 											</td>
 											<td>
 												{!! Form::open(['method'=>'DELETE','route'=>['pegawai.destroy',$data->id]]) !!}
@@ -80,7 +76,7 @@
 			                </div>
 			            </div>
 			        </div>
-					<a  href="{{url('pegawai/create')}}" class="btn btn-primary form-control">Tambah</a>
+					<a  href="{{url('pegawai/create')}}" class="btn btn-primary form-control">Tambah Data</a>
 	
 
 @endsection
