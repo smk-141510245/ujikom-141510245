@@ -3,8 +3,8 @@
     active
 @endsection
 @section('content')
-<h1>Lembur Pegawai</h1>
-	<table border="1" class="table table-striped table-border table-hover">
+<h1><center>Lembur Pegawai</center></h1>
+	<table border="2" class="table table-striped table-border table-hover">
 		<thead>
 			<tr>
 				<th>Lembur Ke-</th>
@@ -34,6 +34,6 @@
 			@endforeach
 		</tbody>
 	</table>
-	<a  href="{{url('lemburp/create')}}" class="btn btn-primary form-control">Tambah</a>
+	<a  href="{{url('lemburp/create')}}" class="btn btn-primary form-control">Tambah Data</a>
 
 @endsection

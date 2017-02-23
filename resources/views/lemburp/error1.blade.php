@@ -33,7 +33,7 @@
                             </div>
                         </div>
 
-                                <center><label><font color="red"> Pegawai tidak memiliki kategori lembur!! Harus membuat dahulu kategori lembur buat pegawai!!</font></label></center><br>
+                                <center><label><font color="red"> Pegawai tidak memiliki kategori lembur!!</font></label></center><br>
                        
                         <div class="form-group{{ $errors->has('Jumlah_jam') ? ' has-error' : '' }}">
                             <label for="Jumlah_jam" class="col-md-4 control-label">Jumlah_jam </label>

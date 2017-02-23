@@ -19,6 +19,14 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
+
+    <style type="text/css">
+        body{
+            background: #00aaff
+        }
+    </style>
+
+
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->

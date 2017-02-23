@@ -1,10 +1,13 @@
 @extends('layouts.app')
 @section('jabatan')
+
+<br><br>
     active
 @endsection
 @section('content')
-<h1>Jabatan</h1>
-	<table border="1" class="table table-striped table-border table-hover">
+
+<h1><center>Jabatan</center></h1>
+	<table border="2" class="table table-striped table-border table-hover">
 		<thead>
 			<tr>
 				<th>No</th>
