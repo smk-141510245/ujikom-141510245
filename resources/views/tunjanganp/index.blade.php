@@ -17,9 +17,7 @@
 				<td>{{$no++}}</td>
 				<td>{{$data->kode_tunjangan_id}}</td>
 				<td>{{$data->pegawai->user->name}}</td>
-				<td>
-					<center><a href="{{route('tunjanganp.edit',$data->id)}}" class='btn btn-danger'> Edit </a></center>
-				</td>
+				
 				<td><center>
 					{!! Form::open(['method'=>'DELETE','route'=>['tunjanganp.destroy',$data->id]]) !!}
 					{!! Form::submit('Delete',['class'=>'btn btn-danger']) !!}

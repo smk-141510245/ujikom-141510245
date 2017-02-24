@@ -56,7 +56,9 @@ class PenggajianController extends Controller
         //return view('penggajian.create');
 
         $tunjangan=Tunjangan_pegawai::paginate(10);
-        return view('penggajian.create',compact('tunjangan'));
+        $penggajian=Penggajian::all();
+        return view('penggajian.create',compact('penggajian','tunjangan'));
+
     }
 
     /**
@@ -168,6 +170,15 @@ class PenggajianController extends Controller
     public function edit($id)
     {
         //
+        $gaji=Penggajian::find($id);
+
+        $penggajian=new Penggajian ;
+
+        $penggajian=array('status_pengambilan'=>1,'tgl_pengambilan'=>date('y-m-d'));
+
+        Penggajian::where('id',$id)->update($penggajian);
+
+        return redirect('penggajian');
     }
 
     /**
@@ -191,5 +202,7 @@ class PenggajianController extends Controller
     public function destroy($id)
     {
         //
+        Penggajian::find($id)->delete();
+        return redirect('penggajian');
     }
 }

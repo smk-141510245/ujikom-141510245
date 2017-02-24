@@ -1,11 +1,11 @@
 @extends('layouts.app')
 @section('content')
     <div class="container">
-    <div class="row">
+        <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-primary">
-                    <div class="panel-heading"><h3><center>Penggajian</center></h3> </div>
-                    <div class="panel-body">
+                <div class="panel-heading">Penggajian</div>
+                <div class="panel-body">
                      <form class="form-horizontal" role="form" method="POST" action="{{ url('/penggajian') }}">
                         {{ csrf_field() }}
 
@@ -28,9 +28,8 @@
                             <div class="col-md-12"></div>
 
                             <div class="col-md-12" >
-                                <button type="submit" class="btn btn-primary form-control">Tambah Data</button>
+                                <button type="submit" class="btn btn-primary form-control">Tambah</button>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </div>
