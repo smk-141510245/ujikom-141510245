@@ -1,21 +1,19 @@
 @extends('layouts.app')
+@section('penggajian')
+    active
+@endsection
 @section('content')
-       <center><h2>Table Penggajian</h2></center> 
-                    
-                    <div class="col-md-12">
-                        <center><a href="{{url('penggajian/create')}}" class="btn btn-info ">Tambah Data</a></center><hr>
-                        <center>{{$penggajian->links()}}</center>
-                    </div>
-                    <table border="1" class="table table-striped table-border table-hover">
-
-                        <thead>
-                        <tr class="bg-danger">
+<center><h2>Tabel Penggajian</h2></center> 
+<table border="2" class="table table-striped table-border table-hover">
+            <thead>
+                <tr>
                         <th>No</th>
-                        <th>Nama Pegawai</th>
-                        <th>Nip Pegawai</th> 
-                        <th>Status Pengambilan</th>
+                        <th><center>Nama Pegawai</center></th>
+                        <th><center>Nip Pegawai</center></th> 
+                        <th><center>Status Pengambilan</center></th>
                         <th colspan="3"><center>Opsi</center></th>
-                        </tr>
+                </tr>
+            </thead>
 
                         @php
                             $no=1 ;
@@ -43,11 +41,15 @@
                         </center>
                         </div> 
                         @endforeach
-                        
+                       
                     </table>
+                    <center><a href="{{url('penggajian/create')}}" class="btn btn-primary form-control">Tambah Data</a></center><hr>
+                </div>
+
+
+
                 </div>
 
            
         
 @endsection
-

@@ -113,7 +113,7 @@ class lemburpegawaiController extends Controller
      */
     public function edit($id)
     {
-        $pegawai=Pegawai::all();
+        $pegawai=Pegawai::with('User')->get();
         $kategori=Kategori_lembur::all();
         $lembur=Lembur_pegawai::find($id);
         return view('lemburp.edit',compact('lembur','pegawai','kategori'));

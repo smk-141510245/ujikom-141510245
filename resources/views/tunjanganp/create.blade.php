@@ -11,7 +11,7 @@
 
                       
                         <div class="form-group{{ $errors->has('pegawai_id') ? ' has-error' : '' }}">
-                            <label for="pegawai_id" class="col-md-4 control-label">Pegawai </label>
+                            <label for="pegawai_id" class="col-md-4 control-label">Pegawai</label>
 
                             <div class="col-md-6">
                                 <select name="pegawai_id" class="form-control">

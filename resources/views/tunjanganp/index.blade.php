@@ -7,7 +7,6 @@
 				<th>No</th>
 				<th>Kode Kategori Tunjangan</th>
 				<th>Nama Pegawai</th>
-				<th>Besar Uang</th>
 				<th colspan="2"><center>Action</center></th>
 			</tr>
 		</thead>
@@ -19,13 +18,13 @@
 				<td>{{$data->kode_tunjangan_id}}</td>
 				<td>{{$data->pegawai->user->name}}</td>
 				<td>
-					<a href="{{route('tunjanganp.edit',$data->id)}}" class='btn btn-danger'> Edit </a>
+					<center><a href="{{route('tunjanganp.edit',$data->id)}}" class='btn btn-danger'> Edit </a></center>
 				</td>
-				<td>
+				<td><center>
 					{!! Form::open(['method'=>'DELETE','route'=>['tunjanganp.destroy',$data->id]]) !!}
 					{!! Form::submit('Delete',['class'=>'btn btn-danger']) !!}
 					{!! Form::close() !!}
-				</td>
+				</center></td>
 			</tr>
 			@endforeach
 		</tbody>

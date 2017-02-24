@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('penggajian')
     active
 @endsection
@@ -175,7 +174,7 @@
 
 													
 												</td>
-												<td>dj</td>
+												<td>Deka</td>
 											</tr>
 											@endforeach
 										</tbody>

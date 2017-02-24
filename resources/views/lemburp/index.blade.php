@@ -23,13 +23,13 @@
 				<td>{{$data->kategori->kode_l}}</td>
 				<td>{{$data->Jumlah_jam}}</td>
 				<td>
-					<a href="{{route('lemburp.edit',$data->id)}}" class='btn btn-danger'> Edit </a>
+					<center><a href="{{route('lemburp.edit',$data->id)}}" class='btn btn-danger'> Edit </a></center>
 				</td>
-				<td>
+				<td><center>
 					{!! Form::open(['method'=>'DELETE','route'=>['lemburp.destroy',$data->id]]) !!}
 					{!! Form::submit('Delete',['class'=>'btn btn-danger']) !!}
 					{!! Form::close() !!}
-				</td>
+				</center></td>
 			</tr>
 			@endforeach
 		</tbody>

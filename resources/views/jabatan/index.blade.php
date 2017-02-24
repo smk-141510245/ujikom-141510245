@@ -26,13 +26,13 @@
 				<td>{{$data->nama_j}}</td>
 				<td>{{$data->besar_uang}}</td>
 				<td>
-					<a href="{{route('jabatan.edit',$data->id)}}" class='btn btn-danger'> Edit </a>
+				<center><a href="{{route('jabatan.edit',$data->id)}}" class='btn btn-danger'>Edit</a></center>
 				</td>
-				<td>
+				<td><center>
 					{!! Form::open(['method'=>'DELETE','route'=>['jabatan.destroy',$data->id]]) !!}
 					{!! Form::submit('Delete',['class'=>'btn btn-danger']) !!}
 					{!! Form::close() !!}
-				</td>
+				</center></td>
 			</tr>
 			@endforeach
 		</tbody>
