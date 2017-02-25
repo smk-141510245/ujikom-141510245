@@ -4,9 +4,10 @@
 @endsection
 @section('content')
 
-<div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-primary">
-                <div class="panel-heading">Pencarian Gaji Menurut Karyawan</div>
+<div class="col-md-15 col-md-offset-0">
+            <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h1><center><div class="panel-title">Pencarian Pegawai</div></center></h1>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" action="{{ url('query') }}" method="GET"">
                         {{ csrf_field() }}
@@ -14,15 +15,15 @@
                         
 
                         <div class="form-group{{ $errors->has('q') ? ' has-error' : '' }}">
-                            <label for="q" class="col-md-4 control-label">Pegawai</label>
 
-                            <div class="col-md-6">
-                                <select name="q" class="form-control">
-                                    <option value="">pilih</option>
-                                    @foreach($pegawaii as $data)
+
+                            
+                               <center> <select name="q">
+                                    <option value="">cari</option>
+                                    @foreach($pegawai as $data)
                                     <option value="{{$data->id}}">{{$data->nip}}{{$data->user->name}}</option>
                                     @endforeach
-                                </select>
+                                </select></center>
 
                                 @if ($errors->has('q'))
                                     <span class="help-block">
@@ -31,21 +32,12 @@
                                 @endif
                             </div>
                         </div>
-
-                       
                         
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary form-control">
+                                <center><button type="submit" class="btn btn-danger ">
                                     Cari
-                                </button>
+                                </button></center>
                             </div>
                         </div>
-                    </form>
-                </div>
-            </div>
-        </div>
 <div class="section">
 <div class="card-panel green white-text">Hasil pencarian : <b>{{$query}}</b></div>
     @foreach($penggajian as $data)
@@ -60,23 +52,20 @@
 
 </div>
 
-	
-	
-	
-
 
 
 @endsection
 @section('content1')
 				<div class="col-md-15 col-md-offset-0">
-                    <div class="panel panel-primary">
+                    <div class="panel panel-danger">
                         <div class="panel-body">
         <div class="col-md-15 col-md-offset-0">
-            <div class="panel panel-primary">
-			    <div class="panel-heading">Data Penggajian</div>
+            <div class="panel panel-danger">
+            <div class=" panel-heading"></div>
+			    <div class="panel-title">Data Penggajian</div>
 	                <div class="panel-body">
 				        
-				        <table border="2" class="table table-success table-border table-hover">
+				        <table border="2" class="table table-danger table-border table-hover">
 										<thead >
 											<tr>
 												<th>No</th>
@@ -121,13 +110,13 @@
 														@foreach($tunjangan as $data1 )
 													@foreach($penggajian as $data2)
 														@if($data2->tunjangan_pegawai_id == $data1->id && $data1->pegawai->id == $data->id )  
-															{{$data2->tanggal_pengambilan}}
+															{{$data2->tgl_pengambilan}}
 														@elseif($data2->tunjangan_pegawai_id != $data1->id && $data1->pegawai->id != $data->id )
 														
 														@elseif($data2->tunjangan_pegawai_id == $data1->id && $data1->pegawai->id != $data->id )
 															
 														@else
-														Belum Diambil
+														Telah Diambil
 														@endif
 														@endforeach
 													@endforeach
@@ -141,7 +130,7 @@
 														@elseif($data2->tunjangan_pegawai_id == $data1->id && $data1->pegawai->id != $data->id )
 															
 														@else
-														Belum diambial
+														Belum diambil
 														<form class="form-horizontal" role="form" method="POST" action="{{ url('/penggajian') }}">
 							                        {{ csrf_field() }}
 							                        	@foreach($tunjangan as $data1)
@@ -157,12 +146,12 @@
 															@endif
 														@endforeach
 														<input type="hidden" name="gaji_pokok" value="{{$data->golongan->besar_uang+$data->jabatan->besar_uang}}">
-							                        <input type="hidden" name="tanggal_pengambilan" value="{{date('Y-m-d')}}" >
+							                        <input type="hidden" name="tgl_pengambilan" value="{{date('Y-m-d')}}" >
 							                        <input type="hidden" name="status_pengambilan" value="1" >
 							                       <input type="hidden" name="petugas_penerima" value="dj">
 							                        <div class="form-group">
 							                            <div class="col-md-10 col-md-offset-0">
-							                                <button type="submit" class="btn btn-primary form-control">
+							                                <button type="submit" class="btn btn-danger form-control">
 							                                    Ambil
 							                                </button>
 							                            </div>
@@ -174,7 +163,6 @@
 
 													
 												</td>
-												<td>Deka</td>
 											</tr>
 											@endforeach
 										</tbody>
